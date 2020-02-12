@@ -1,20 +1,31 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Create Account
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Username <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-item>
+        <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Re-enter Password <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+    </div>
 </ion-content>

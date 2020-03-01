@@ -40,7 +40,7 @@ export class HomePage {
       this.authService.signupUser(email, password).then(
         () => {
           this.loading.dismiss().then(() => {
-            this.router.navigateByUrl("home");
+            this.router.navigateByUrl("dashboard");
           });
         },
         error => {

@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
+
+  
+  <ion-card>
+    <img src="https://www.fillmurray.com/640/360" />
+    <ion-card-header>
+      <ion-card-subtitle>This is a card</ion-card-subtitle>
+      <ion-card-title>Welcome</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Hey! You made it to this restricted page.
+      
+      <div class="ion-padding">
+        <ion-button
+          (click)="logoutUser()"
+          expand="block"
+        >
+          Log Out
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  
 
 </ion-content>

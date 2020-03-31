@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../services/user/auth.service";
-import { LoadingController } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { LoadingController } from "@ionic/angular";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-dashboard",
@@ -13,7 +13,7 @@ export class DashboardPage implements OnInit {
   constructor(
     private authService: AuthService,
     public loadingCtrl: LoadingController,
-    private router: Router,
+    private router: Router
   ) {}
 
   ngOnInit() {}
@@ -21,11 +21,14 @@ export class DashboardPage implements OnInit {
   async logoutUser(): Promise<void> {
     this.loading = await this.loadingCtrl.create();
     await this.loading.present();
-    this.authService.logoutUser().then(
-      () => {
-        this.loading.dismiss().then(() => {
-          this.router.navigateByUrl("login");
-        });
+    this.authService.logoutUser().then(() => {
+      this.loading.dismiss().then(() => {
+        this.router.navigateByUrl("login");
       });
+    });
+  }
+
+  posts() {
+    this.router.navigateByUrl("posts");
   }
 }

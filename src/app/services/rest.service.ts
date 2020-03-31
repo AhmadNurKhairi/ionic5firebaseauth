@@ -7,7 +7,9 @@ import { HttpClient } from "@angular/common/http";
 export class RestService {
   apiUrl = "http://128.199.129.234";
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient) {
+    console.log("Hello");
+  }
 
   getPosts() {
     return new Promise(resolve => {

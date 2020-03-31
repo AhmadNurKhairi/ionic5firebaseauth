@@ -9,7 +9,9 @@ import { RestService } from "../services/rest.service";
 export class PostsPage implements OnInit {
   posts: any;
 
-  constructor(public restService: RestService) {}
+  constructor(public restService: RestService) {
+    this.getPosts();
+  }
 
   ngOnInit() {}
 
